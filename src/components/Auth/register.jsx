@@ -125,9 +125,9 @@ class Register extends React.Component {
     return (
       <Grid textAlign='center' verticalAlign='middle' className='app'>
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as='H2' icon color='orange' textAlign='center'>
+          <Header as='h1' icon color='orange' textAlign='center'>
             <Icon name='puzzle piece' color='orange' />
-            Register for DevChat
+            Register for Beeper
           </Header>
           <Form size='large' onSubmit={this.handleSubmit}>
             <Segment stacked>
