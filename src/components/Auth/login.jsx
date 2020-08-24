@@ -64,7 +64,7 @@ class Login extends React.Component {
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as='h1' icon color='violet' textAlign='center'>
             <Icon name='code branch' color='violet' />
-            Login for Beeper
+            Login for Beep
           </Header>
           <Form size='large' onSubmit={this.handleSubmit}>
             <Segment stacked>

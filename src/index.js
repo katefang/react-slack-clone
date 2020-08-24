@@ -5,7 +5,7 @@ import App from './App';
 import Login from './components/Auth/login';
 import Register from './components/Auth/register';
 import rootReducer from './components/reducers/reducer';
-import { setUser } from './components/actions/userAction';
+import { setUser, clearUser } from './components/actions/userActions';
 import registerServiceWorker from './registerServiceWorker';
 import Spinner from './components/spinner';
 
@@ -27,6 +27,9 @@ class Root extends React.Component {
         // console.log(user);
         this.props.setUser(user);
         this.props.history.push('/');
+      } else {
+        this.props.history.push('/login');
+        this.props.clearUser();
       }
     });
   }
@@ -48,7 +51,9 @@ const mapStateToProps = state => ({
   isLoading: state.user.isLoading
 });
 
-const RootWithAuth = withRouter(connect(mapStateToProps, { setUser })(Root));
+const RootWithAuth = withRouter(
+  connect(mapStateToProps, { setUser, clearUser })(Root)
+);
 
 ReactDOM.render(
   <Provider store={store}>
