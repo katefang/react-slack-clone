@@ -1,5 +1,4 @@
-import { combineReducers } from 'redux';
-import * as actionTypes from '../actions/types';
+import * as actionTypes from '../actions/action-types';
 
 const initialUserState = {
   currentUser: null,
@@ -15,7 +14,7 @@ const user_reducer = (state = initialUserState, action) => {
       };
     case actionTypes.CLEAR_USER:
       return {
-        ...initialUserState,
+        ...state,
         isLoading: false
       };
     default:
@@ -23,8 +22,4 @@ const user_reducer = (state = initialUserState, action) => {
   }
 };
 
-const rootReducer = combineReducers({
-  user: user_reducer
-});
-
-export default rootReducer;
+export default user_reducer;

@@ -4,9 +4,8 @@ import './index.css';
 import App from './App';
 import Login from './components/Auth/login';
 import Register from './components/Auth/register';
-import rootReducer from './components/reducers/reducer';
-import { setUser, clearUser } from './components/actions/userActions';
-import registerServiceWorker from './registerServiceWorker';
+import rootReducer from './reducers/root-reducer';
+import { setUser, clearUser } from './actions/user-actions';
 import Spinner from './components/spinner';
 
 import firebase from './firebase';
@@ -63,4 +62,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-registerServiceWorker();

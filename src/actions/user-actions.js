@@ -1,4 +1,4 @@
-import * as actionTypes from './types';
+import * as actionTypes from './action-types';
 
 export const setUser = user => {
   return {
